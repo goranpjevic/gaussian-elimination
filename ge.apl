@@ -23,8 +23,7 @@ le←{
     s←x×i⊃⌽↓v
     num←(i⊃⌽g)-+/⌽(i-1)↑⌽s
     den←⊃(i-1)↓⌽s
-    xr←num÷den
-    x←⌽(xr@i)⌽x
+    x←⌽((num÷den)@i)⌽x
     x(i+1)
   }⍣(≢⍉v))x 1
 }
