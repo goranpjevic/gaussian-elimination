@@ -13,9 +13,9 @@ ge←{
 
 ⍝ solve linear equations
 le←{
-  a←⌽↑⌽¨⍵
-  g←1⌷⊖⍉a
-  v←⍉¯1↓⍉a
+  e←⌽↑⌽¨⍵
+  g←1⌷⊖⍉e
+  v←⍉¯1↓⍉e
   x←(≢⍉v)⍴1
   ⊃({
     x i←⍵
