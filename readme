@@ -1,3 +1,20 @@
                               gaussian-elimination
 
 solve systems of linear equations using gaussian elimination.
+
+note:
+
+the first line in the input file contains the number of equations to solve.
+the following lines contain numbers separated by spaces, representing the
+matrix to be solved.
+
+example input file:
+
+3
+1 1 2 6
+0 2 1 4
+3 1 0 4
+
+usage:
+
+  ge.apl [input_file]
