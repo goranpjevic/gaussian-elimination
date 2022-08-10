@@ -4,6 +4,8 @@ solve systems of linear equations using gaussian elimination.
 
 note:
 
+128 bit floating point numbers are used by default.
+
 the first line in the input file contains the number of equations to solve.
 the following lines contain numbers separated by spaces, representing the
 matrix to be solved.
