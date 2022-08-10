@@ -5,11 +5,10 @@
 
 ⍝ gaussian elimination
 ge←{
-  p mat←⍵
-  n←⍉1↓⍉1↓mat
+  p n←⍵
   k←(⊃⍋~(⍸0∘=))|⊃↓⍉n
   r←↑(⊂k⌷n),{(⊃⍵)∘{⍵-⍺×(⊃⍵)÷⊃⍺}¨1↓⍵}↓(k-1)⊖n
-  (p,⊂1⌷r)r
+  (p,⊂1⌷r)(⍉1↓⍉1↓r)
 }
 
 ⍝ solve linear equations
@@ -29,5 +28,5 @@ le←{
 }
 
 a←2⎕nq#'getcommandlineargs'
-m←0,⍉0,⍉↑' '(⍎¨≠⊆⊢)¨1↓⊃⎕nget(2⊃a)1
-⎕←le(⊃ge⍣(¯1+≢m))⍬m
+m←↑' '(⍎¨≠⊆⊢)¨1↓⊃⎕nget(2⊃a)1
+⎕←le(⊃ge⍣(≢m))⍬m
